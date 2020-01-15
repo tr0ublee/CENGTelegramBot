@@ -4,6 +4,8 @@ import telebot
 
 
 #read token
+#TODO
+# ADD TOKEN TO .gitignore
 bot=telebot.TeleBot(input())
 
 
@@ -22,7 +24,7 @@ def send_help(message):
     global bot
     bot.reply_to(message,"su anlik yardim edilecek bir sey yok")
 
-@bot.message_handler(regexp="sa")
+@bot.message_handler(regexp="\\bsa\\b")
 def send_sa(message):
     global bot
     bot.reply_to(message,"as")
